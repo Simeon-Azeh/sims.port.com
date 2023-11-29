@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rasa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="images/logo.svg" class="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="section-p1 blog-header">
+        <h2>Blog</h2>
+        <p>Discover the best in fashion trends</p>
+    </section>
+
+<section id="blog">
+    <div class="blog-box">
+        <div class="blog-img">
+            <img src="images/blog1.png" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>International deliveries Available between 10 countries</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Donec varius dolor risus, ac semper nunc tempus nec. Phasellus
+                 feugiat ligula accumsan diam ultricies, quis commodo...</p>
+                 <a href="#">CONTINUE READING</a>
+        </div>
+        <h1>08/01</h1>
+    </div>
+
+    <div class="blog-box">
+        <div class="blog-img">
+            <img src="images/blog2.png" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Plan your budget with our App</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Donec varius dolor risus, ac semper nunc tempus nec. Phasellus
+                 feugiat ligula accumsan diam ultricies, quis commodo...</p>
+                 <a href="#">CONTINUE READING</a>
+        </div>
+        <h1>10/01</h1>
+    </div>
+    <div class="blog-box">
+        <div class="blog-img">
+            <img src="images/blog3.png" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>More cars! Faster delivery</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Donec varius dolor risus, ac semper nunc tempus nec. Phasellus
+                 feugiat ligula accumsan diam ultricies, quis commodo...</p>
+                 <a href="#">CONTINUE READING</a>
+        </div>
+        <h1>30/05</h1>
+    </div>
+    <div class="blog-box">
+        <div class="blog-img">
+            <img src="images/blog4.png" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Shop now at the click of a button</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Donec varius dolor risus, ac semper nunc tempus nec. Phasellus
+                 feugiat ligula accumsan diam ultricies, quis commodo...</p>
+                 <a href="#">CONTINUE READING</a>
+        </div>
+        <h1>08/01</h1>
+    </div>
+    <div class="blog-box">
+        <div class="blog-img">
+            <img src="images/blog5.png" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Christmas discounts</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Donec varius dolor risus, ac semper nunc tempus nec. Phasellus
+                 feugiat ligula accumsan diam ultricies, quis commodo...</p>
+                 <a href="#">CONTINUE READING</a>
+        </div>
+        <h1>13/01</h1>
+    </div>
+    <div class="blog-box">
+        <div class="blog-img">
+            <img src="images/blog6.png" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>Exchange rewards for goods</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Donec varius dolor risus, ac semper nunc tempus nec. Phasellus
+                 feugiat ligula accumsan diam ultricies, quis commodo...</p>
+                 <a href="#">CONTINUE READING</a>
+        </div>
+        <h1>12/01</h1>
+    </div>
+</section>
+
+
+<section id="pagination">
+    <a href="shop.html">1</a>
+    <a href="moreshop.html">2</a>
+    <a href="#">3</a>
+    <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+
+</section>
+
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign up for our Newsletter</h4>
+        <p>Get email updates about latest trends & <span>special offers.</span></p>
+    </div>
+    <div class="form">
+        <input type ="text" placeholder="Enter your email">
+        <button class="normal">Sign up</button>
+    </div>
+</section>
+    <button id="scrollToTopButton" onclick="scrollToTop()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+
+
+<footer class="section-p1 img-con">
+    <div class="col">
+        <img id="img-logo" class="logo" src="images/logo.svg">
+        <h4>Contact</h4>
+        <p><strong>Address: </strong>Kg 168, Bumbogo, Rwanda</p>
+        <p><strong>Phone: </strong>+250 798654693</p>
+        <p><strong>Hours: </strong>Mon - Sat, 08:00am - 05:00pm</p>
+
+        <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-x-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms and conditions</a>
+        <a href="#">Contact us</a>
+    </div>
+
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign in</a>
+        <a href="#">View cart</a>
+        <a href="#">My wishlist</a>
+        <a href="#">Track my order</a>
+        <a href="#">Help</a>
+    </div>
+
+    <div class="col install">
+        <h5>Secured payment Gateways</h5>
+        <img id="gateway-l" src="images/getway.png" alt="">
+    </div>
+    <div class="copyright">
+        <p>&copy; Simeon Azeh Kongnyuy 2023 - Available for sale
+        </p>
+    </div>
+</footer>
+
+    <script>
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Add smooth scrolling behavior
+            });
+        }
+    
+        // Show the scroll-to-top button when the user scrolls down
+        window.onscroll = function () {
+            scrollFunction();
+        };
+    
+        function scrollFunction() {
+            var scrollToTopButton = document.getElementById("scrollToTopButton");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        }
+    </script>  
+
+    <!--Javascript for toggling navbar on smaller screen-->
+    <script>
+        const bar = document.getElementById('bar');
+        const close = document.getElementById('close');
+        const nav = document.getElementById('navbar');
+
+        if (bar) {
+            bar.addEventListener ('click', () =>{
+                nav.classList.add('active')
+            })
+        }
+
+        if (close) {
+            close.addEventListener ('click', () => {
+                nav.classList.remove('active');
+            })
+        }
+    </script> 
+</body>
+</html>
