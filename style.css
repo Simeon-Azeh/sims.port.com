@@ -247,7 +247,7 @@ flex-wrap: wrap;
 #product1 .pro {
 position: relative;
 text-align: center;
-width: 80%;
+width: 70%;
 min-width: 200px;
 border-radius: 25px;
 cursor: pointer;
@@ -296,7 +296,12 @@ width: 100%;
 border-radius: 20px;
 margin-top: 10px;
 }
-
+#product1 .pro video,
+#product1 .pro-2 video {
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 10px;
+}
 #product1 .pro .des,
 #product1 .pro-2 .des {
 text-align: center;
@@ -655,7 +660,7 @@ text-align: center;
 }
 #pagination a {
     text-decoration:none ;
-    background-color: #ff3131;
+    background-color: #336b89;
     color: #fff;
     padding: 15px 20px;
     border-radius: 4px;
@@ -689,7 +694,7 @@ text-align: center;
 }
 #prodetails .single-pro-details h4 {
     padding: 40px 0 20px 0;
-    color: #ff3131;
+    color: #336b89;
 }
 #prodetails .single-pro-details h2 {
     font-size: 26px;
@@ -700,18 +705,20 @@ text-align: center;
     margin-bottom: 20px;
 }
 #prodetails .single-pro-details input {
-    width: 50px;
-    height: 47px;
+    width: 100px;
+    height: 50px;
+    border: 1px solid #ccc;
     padding-left: 10px;
     font-size: 16px;
     margin-right: 10px;
 }
 #prodetails .single-pro-details button {
-    background: #ff3131;
+    background: #336b89;
     color: #fff;
 }
 #prodetails .single-pro-details input:focus {
     outline: none;
+    box-shadow: 2px 4px 15px 10px rgba(0, 0, 0, 0.05);
 }
 #prodetails .single-pro-details span {
     line-height: 25px;
@@ -760,10 +767,10 @@ text-align: center;
     right: -60px;
 }
 #blog .blog-details a:hover {
-    color: #ff3131;
+    color: #336b89;
 }
 #blog .blog-details a:hover::after {
-    background-color: #ff3131;
+    background-color: #336b89;
 }
 #blog .blog-box h1 {
     position: absolute;
@@ -781,7 +788,7 @@ text-align: center;
     margin-top: 5px;
 }
 #page-header.about-header {
-    background-image: url("images/blogbanner.png");
+    background-image: url("images/banner2.png");
 }
 #about-head {
     display: flex;
@@ -808,7 +815,31 @@ text-align: center;
     border-radius: 20px;
     outline: none;
 }
-
+#login-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    padding: 20px 15px;
+    width: 450px;
+    height: 350px;
+    background-color: #fff;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+form h2 {
+    text-align: center;
+    color: #336b89;
+    margin: 20px 0 20px 0;
+}
+form input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 1px solid #3789b6;
+    margin-top: 20px;
+}
 
 @media (max-width:799px) {
 .section-p1 {
@@ -934,8 +965,11 @@ button.normal {
     width: 23%;
 }
 #newsletter .form {
-    width: 65%;
+    width: 100%;
     margin-top: 20px;
+}
+#newsletter button {
+   margin-right: 20px;
 }
 }
 @media (max-width: 499px) {
@@ -1034,10 +1068,13 @@ h6 {
    margin-top: -20px;
 }
 #blog {
-    padding: 90px 30px 0 30px;
+    padding: 90px 20px 0 15px;
 }
 #blog .blog-details h4 {
-    margin-top: -130px;
+    margin-top: -100px;
+}
+#blog .blog-details a::after {
+    right: -55px;
 }
 #about-head {
     flex-direction: column;

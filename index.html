@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kora</title>
+    <title>Simeon</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/1.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -212,8 +212,8 @@
         <p>Get email updates about latest trends & <span>special offers.</span></p>
     </div>
     <div class="form">
-        <input type ="text" placeholder="Enter your email">
-        <button class="normal">Sign up</button>
+        <input type ="email" id="newsletterEmail" placeholder="Enter your email" required>
+        <button class="normal" onclick="subscribeToNewsletter()">Sign up</button>
     </div>
 </section>
     <button id="scrollToTopButton" onclick="scrollToTop()">
@@ -223,7 +223,6 @@
 
 <footer class="section-p1 img-con">
     <div class="col">
-        <img id="img-logo" class="logo" src="images/logo.svg">
         <h4>Contact</h4>
         <p><strong>Address: </strong>Kg 168, Bumbogo, Rwanda</p>
         <p><strong>Phone: </strong>+250 798654693</p>
@@ -250,13 +249,6 @@
         <a href="#">Contact me</a>
     </div>
 
-    <div class="col">
-        <h4>My Account</h4>
-        <a href="#">Sign in</a>
-        <a href="#">Create account</a>
-        <a href="#">Book</a>
-        <a href="#">Help</a>
-    </div>
 
     <div class="col install">
         <h5>Secured payment Gateways</h5>
@@ -316,5 +308,46 @@
           window.open(viewerUrl, '_blank');
         }
       </script>
+
+<script>
+    function subscribeToNewsletter() {
+        const email = document.getElementById('newsletterEmail').value;
+        const spreadsheetId = '1EGrjSyAGdlu2i5Q-v_CzK0RV5ZsiT1Ysl2vGHr9yscc';
+        const apiKey = 'AIzaSyDX8s_28QybtSGJCiO0vqwPJiXK3eWh15w';
+        const sheetName = 'Sheet1'; // Adjust if your sheet name is different
+
+        // Construct the URL for the Google Sheets API
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/Newsletter:append?valueInputOption=RAW&key=${apiKey}`;
+
+        // Prepare the data
+        const values = [[email]];
+
+        // Make a POST request to Google Sheets API
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                values: values,
+            }),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Success:', data);
+            alert('Thank you for subscribing!');
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Error subscribing. Please try again later.');
+        });
+    }
+</script>
+
 </body>
 </html>
