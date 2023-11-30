@@ -38,7 +38,7 @@
         <h4>Frontend web developer | Brand manager <br>
             | Communications manager | Asp Mobile Dev</h4></p>
         <div class="hero-buts">
-            <button class="normal hire">Download CV<i class="fa-solid fa-download"></i></button>
+            <button class="normal hire" onclick="openPdfInViewer('https://drive.google.com/uc?export=download&id=1XvTMAr_zQBk7ZVdBWg6NoZxgFiS4nYSg')">Download CV<i class="fa-solid fa-download"></i></button>
             <button class="normal hire">Hire me<i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </section>
@@ -310,5 +310,11 @@
             })
         }
     </script>
+    <script>
+        function openPdfInViewer(pdfUrl) {
+          var viewerUrl = 'https://docs.google.com/viewer?url=' + encodeURIComponent(pdfUrl);
+          window.open(viewerUrl, '_blank');
+        }
+      </script>
 </body>
 </html>
