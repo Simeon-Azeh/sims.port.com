@@ -990,8 +990,7 @@ line-height: 35px;
     padding-right: 25px;
 }
 #sm-banner .banner-box {
-    height: 40vh;
-   
+    min-width: 359px;
 }
 #sm-banner .banner-box2 {
     margin-top: 20px;
